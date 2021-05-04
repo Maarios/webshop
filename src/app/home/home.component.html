@@ -3,7 +3,8 @@
 
 <div *ngFor="let item of items">
     <img class="item-picture" src="{{ item.imgSrc }} ">
-    <div class="item-title"></div>{{ item.title}}
-    <div class="item-price"></div> {{item.price}}
+    <div class="item-title">{{ item.title}}</div>
+    <div class="item-price">{{item.price}}</div>
     <button class="btn btn-dark" (click)="onAddToCart(item)">Lisa ostukorvi</button>
+
 </div>
