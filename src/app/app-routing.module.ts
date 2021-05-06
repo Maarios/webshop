@@ -2,10 +2,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
+import { ItemAddComponent } from './admin/item-add/item-add.component';
+import { ItemEditComponent } from './admin/item-edit/item-edit.component';
+import { ItemListComponent } from './admin/item-list/item-list.component';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'ostukorv', component: CartComponent}
+  {path: '', component: HomeComponent },
+  {path: 'ostukorv', component: CartComponent },
+  {path: 'admin/lisa-ese', component: ItemAddComponent },
+  {path: 'admin/muuda-ese', component: ItemEditComponent },
+  {path: 'admin/esemete-list', component: ItemListComponent },
+  {path: 'admin', component: AdminHomeComponent },
 ];
 
 @NgModule({

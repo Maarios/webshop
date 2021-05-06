@@ -1,0 +1,9 @@
+<button routerLink="/admin" >MINE TAGASI</button>
+
+<br><br>
+
+<form (ngSubmit)="onSubmit(from)" #from="ngForm">
+    <label>Nimetus</label><br>
+    <input type="text"ngModel name="title"><br>
+    <button class="btn btn-success" >SISESTA</button>
+</form>
