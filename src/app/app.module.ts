@@ -13,6 +13,7 @@ import { ItemListComponent } from './admin/item-list/item-list.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     ItemAddComponent,
     ItemEditComponent,
     ItemListComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+   
   ],
   imports: [
     BrowserModule,
