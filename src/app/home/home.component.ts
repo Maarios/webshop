@@ -15,16 +15,14 @@ export class HomeComponent implements OnInit {
     private itemService: ItemService) { }
 
 // KAKS COMPONENTI EI SAA OMAVAHEL OTSE SUHELDA
-
   ngOnInit(): void {
     this.items = this.itemService.items;
-    
-
   }
+  
   onAddToCart(item: any){
+    this.cartService.addToCart(item);
     //this.items = [];
     //this.items.push(item);
-    this.cartService.itemsInCart.push(item);
   }
 
 }
