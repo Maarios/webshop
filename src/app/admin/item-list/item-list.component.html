@@ -4,5 +4,6 @@
     <div>{{ item.title }}</div>
     <div>{{ item.price }}</div>
     <button (click)="onDeleteItem(i)" >X</button>
+    <button routerLink="/admin/muuda-ese/{{i}} " >Muuda toodet</button>
     <br>
 </div>
