@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Item } from 'src/app/models/item.model';
 import { ItemService } from 'src/app/services/item.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ItemService } from 'src/app/services/item.service';
   styleUrls: ['./view.component.css']
 })
 export class ViewComponent implements OnInit {
-  item!: { title: string, price: number, imgSrc: string, category: string};
+  item!: Item;
 // Hüüumärgiga ei taha väärtust anda, annan väärtuse hiljem
 
 //ActivatedRouter on node_module sees asuv erline klass,
