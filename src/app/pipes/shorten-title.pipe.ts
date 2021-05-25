@@ -13,3 +13,7 @@ export class ShortenTitlePipe implements PipeTransform {
   }
 
 }
+// Elas metsas mutionu, keset metsa -- split(" ")
+// ['Elas', 'mestas', 'mutionu,', 'keset', 'metsa'] -- .slice(0,3)
+// ['Elas', 'mestas', 'mutionu,'] -- .join("::")
+// Elas::metsas::mutionu,    -- .replace(',',"")

@@ -19,6 +19,7 @@ import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { ViewComponent } from './home/view/view.component';
 import { ItemPricePipe } from './pipes/item-price.pipe';
 import { ShortenTitlePipe } from './pipes/shorten-title.pipe';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ShortenTitlePipe } from './pipes/shorten-title.pipe';
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
             }
-        })
+        }),
+        NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
