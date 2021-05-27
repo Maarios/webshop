@@ -7,12 +7,14 @@ import { ItemEditComponent } from './admin/item-edit/item-edit.component';
 import { ItemListComponent } from './admin/item-list/item-list.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { ViewComponent } from './home/view/view.component';
+import { CarouselSettingsComponent } from './admin/carousel-settings/carousel-settings.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent },
   {path: 'ostukorv', component: CartComponent },
   {path: 'toode/:itemId', component: ViewComponent},
   {path: 'admin/lisa-ese', component: ItemAddComponent },
+  {path: 'admin/karuselli-seaded', component: CarouselSettingsComponent },
   {path: 'admin/muuda-ese/:itemId', component: ItemEditComponent },
   {path: 'admin/esemete-list', component: ItemListComponent },
   {path: 'admin', component: AdminHomeComponent },
