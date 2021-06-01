@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { createFalse } from 'typescript';
 import { CarouselService } from '../admin/carousel-settings/carousel.service';
 import { CartService } from '../cart/cart.service';
+import { CarouselImage } from '../models/carousel-image.model';
 import { Item } from '../models/item.model';
 import { ItemService } from '../services/item.service';
 
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   // *ngFor="let image on images"
 
 
-  images: any[] = [];
+  images: CarouselImage[] = [];
    //{ url: "https://picsum.photos/id/700/900/500", text: "Esimese pildi tekst", header: "Pildi pealkiri", alt: "Siin on esimen pilt" },
    //{ url: "https://picsum.photos/id/533/900/500", text: "Teise pildi tekst", header: "Teise pildi pealkiri", alt: "Siin on teine pilt" },
    //{ url: "https://picsum.photos/id/807/900/500", text: "Kolmanda pildi tekst", header: "Kolmanda pildi pealkiri", alt: "Siin on kolmas pilt" },
@@ -27,10 +27,7 @@ export class HomeComponent implements OnInit {
 //2. muudan, kustutan pilte
 //3. kuvan teises Componendis ka välja 
 //4. küsin teises Componendis mitu pilti mul on 
-
-
-
-
+  
   items: Item[] = [];
   pauseOnHover = false;
   kuupaev = new Date();
@@ -55,10 +52,10 @@ export class HomeComponent implements OnInit {
     // ngOnInit() käima
     this.images = this.carouselService.images;
     this.items = this.itemService.items;
-    this.config.interval = 2500;
-    this.config.wrap = true;
-    this.config.keyboard = true;
-    this.config.pauseOnHover = true;
+    this.config.interval = this.carouselService.carouselSettings.interval;
+    this.config.wrap = this.carouselService.carouselSettings.wrap;
+    this.config.keyboard = this.carouselService.carouselSettings.keyboard;
+    this.config.pauseOnHover = this.carouselService.carouselSettings.pauseOnHoover;
   }
   
   

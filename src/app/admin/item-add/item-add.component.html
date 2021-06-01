@@ -8,7 +8,12 @@
     <label>Hind</label><br>
     <input type="number"ngModel name="price" placeholder= "Sisesta hind" required><br><br>
      <label>Kategooria</label><br>
-    <input type="text"ngModel name="category" pattern="^[a-zA-Z]+$" placeholder= "Sisesta kategooria" required><br><br>
+    <!--<input type="text"ngModel name="category" pattern="^[a-zA-Z]+$" placeholder= "Sisesta kategooria" required><br><br>-->
+    <select ngModel name="category">
+        <option *ngFor="let category of categories" value= "{{ category }}">{{ category }} </option>
+
+    </select>
+    <br>
     <label>Pilt</label><br>
     <input type="text"ngModel name="imgSrc" placeholder= "Sisesta pildi aadress" required ><br><br>
     <button [disabled]="addItemForm.invalid" class="btn btn-success" >SISESTA</button>
