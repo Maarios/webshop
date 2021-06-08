@@ -23,7 +23,8 @@ export class ItemAddComponent implements OnInit {
     console.log(form.value);
     this.itemService.items.push(form.value);
     if (form.valid) {
-      this.itemService.items.push(form.value);
+      //this.itemService.items.push(form.value);
+      this.itemService.addItemToDatabase(form.value).subscribe();
     }
   }
 
