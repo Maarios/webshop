@@ -14,20 +14,6 @@
   <!--<div *ngFor="let item of list"></div> -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <ng-template *ngFor="let image of images" ngbSlide>
       <div class="picsum-img-wrapper">
         <img src="{{image.url}} " alt="{{image.alt}} ">
@@ -50,6 +36,21 @@ korraga loeab ja saadab väärtust
 seob ära muutuja typescriptis
 väärtus liigub otse inputist muutuja .ts-s
 -->
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+<div *ngFor="let category of items | uniqueCategory">{{ item.category }}</div>
 
 
 

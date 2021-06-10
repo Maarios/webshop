@@ -13,13 +13,13 @@ export class CarouselService {
     ];
 
     carouselSettings = {
-      interval: 2000, 
+      interval: 2500, 
       wrap: true,
       keyboard: true,
       pauseOnHoover: true
      };
 
-     //abjektile annan väätusi:            CarouselSettingsComponent
+     //objektile annan väätusi:            CarouselSettingsComponent
      //carouselSettings.interval = 10000;
      //   anname vormi seest väärtusi ehk form.value.interval;
 

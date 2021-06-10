@@ -22,6 +22,7 @@ import { ItemPricePipe } from './pipes/item-price.pipe';
 import { ShortenTitlePipe } from './pipes/shorten-title.pipe';
 import { CarouselSettingsComponent } from './admin/carousel-settings/carousel-settings.component';
 import { CategoryComponent } from './admin/category/category.component';
+import { UniqueCategoryPipe } from './pipes/unique-category.pipe';
 
 
 
@@ -41,6 +42,7 @@ import { CategoryComponent } from './admin/category/category.component';
     ShortenTitlePipe,
     CarouselSettingsComponent,
     CategoryComponent,
+    UniqueCategoryPipe,
    
   ],
   imports: [
