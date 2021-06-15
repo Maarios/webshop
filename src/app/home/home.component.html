@@ -50,16 +50,16 @@ väärtus liigub otse inputist muutuja .ts-s
 
 
 
-<div *ngFor="let category of items | uniqueCategory">{{ item.category }}</div>
+<span *ngFor="let category of itemsOriginal | uniqueCategory"(click)="onCategorySelected(category) ">{{ category }} <br> </span>
 
 
 
 
 
-<div *ngIf="items.length == 0">ESEMEID EI OLE</div>
+<div *ngIf="itemsShow.length == 0">ESEMEID EI OLE</div>
 
-<div *ngFor="let item of items; let i = index">
-    <img class="item-picture" routerLink="toode/{{i}}" src="{{ item.imgSrc }} ">
+<div *ngFor="let item of itemsShow">
+    <img class="item-picture" routerLink="toode/{{item.id}}" src="{{ item.imgSrc }} ">
     <div class="item-title">{{ item.title | shortenTitle: 3 }}</div>
     <div class="item-price">{{item.price | itemPrice }}</div>
     <button class="btn btn-dark" (click)="onAddToCart(item)">Lisa ostukorvi</button>

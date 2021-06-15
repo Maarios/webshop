@@ -15,6 +15,12 @@ export class ItemService {
    url = "https://omis-webshop-default-rtdb.europe-west1.firebasedatabase.app/items.json";
 
   saveItemsToDatabase() {
+    //this.items = this.items .map(item => ({ ...item, id: Math.floor
+    //(Math.random() * (99999999 - 10000000) + 1000000) }))
+    // Math.random -- 0.0000000000001
+    // Math.random -- 0.999999999999
+    // 
+    //Id lisamine tootele 1.kord
     return this.http.put(this.url, this.items);
   }
 
