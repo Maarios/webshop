@@ -25,24 +25,25 @@ export class ViewComponent implements OnInit {
     
     let id = this.route.snapshot.paramMap.get("itemId");
     
-    
-    
     //let on lokaakne muutuja, ta ei paista funktsioonist väljapoole
     
-    
-    
     if (id){
-      
-      
-      // castimine numbriks-URList saadakse string ehk sõnaline muutuja
-      
-      
+
       //this.item = this.itemService.items[Number(id)];
-      let item = this.itemService.items.find(item => item.id == Number(id));
+      // castimine numbriks-URList saadakse string ehk sõnaline muutuja
+      // castimine numbriks-URList saadakse string ehk sõnaline muutuja
+
+      this.itemService.getItemsFromDatabase().subscribe(itemsFromDb => {
+        this.itemService.items = [];
+        for (const key in itemsFromDb) {
+          this.itemService.items.push(itemsFromDb[key]);
+        }
+     
+        let item = this.itemService.items.find(item => item.id == Number(id));
       if (item) {
         this.item = item;
       }
-      
+    }); 
       
       //massiivist saan konkreetse IDga ehk indeksiga väärtuse kätte
       //kui küsin sellelt massiivilt kandiliste sulgude kaudu:

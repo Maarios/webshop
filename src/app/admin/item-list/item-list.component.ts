@@ -15,17 +15,14 @@ export class ItemListComponent implements OnInit {
 
   ngOnInit(): void {
     //this.items = this.itemServie.items;
-    console.log("hakkan esemeid andmebaasist võtma")
+    
     this.itemService.getItemsFromDatabase().subscribe(itemsFromDb => {
-      console.log("esemed andmebaasist võetud")
       this.itemService.items = [];
       for (const key in itemsFromDb) {
         this.items.push(itemsFromDb [key]);
         this.itemService.items.push(itemsFromDb[key]);
       }
-      //console.log(itemsFromDb);
-      //this.items = itemsFromDb;
-      //this.itemService.items = itemsFromDb;
+   
     } );
   }
 

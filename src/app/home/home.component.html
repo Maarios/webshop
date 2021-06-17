@@ -1,4 +1,4 @@
-{{ kuupaev | date }}  
+   {{ kuupaev | date }}  
 
 <ngb-carousel *ngIf="images">
   <!-- list --- muutuja, mis peab olema massiiv ehk [,,,]
@@ -49,10 +49,14 @@ väärtus liigub otse inputist muutuja .ts-s
 
 
 
+<span (click)="onCategorySelected('all')">Kõik kategooriad</span><br>
+<span *ngFor="let category of itemsOriginal | uniqueCategory" (click)="onCategorySelected(category)">{{ category }} <br> </span>
 
-<span *ngFor="let category of itemsOriginal | uniqueCategory"(click)="onCategorySelected(category) ">{{ category }} <br> </span>
-
-
+<br>
+  <span>Järiesta</span>
+  <button (click)="onSortByTitle()">Tähestiku järgi</button>
+  <button (click)="onSortByPrice()">Hinna järgi</button>
+<br><br>
 
 
 
